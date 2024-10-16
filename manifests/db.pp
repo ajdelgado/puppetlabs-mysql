@@ -112,7 +112,7 @@ define mysql::db (
 
     mysql_grant { "${user}@${host}/${table}":
       privileges => $grant,
-      provider   => 'mysql',
+      # provider   => 'mysql',
       user       => "${user}@${host}",
       table      => $table,
       options    => $grant_options,
