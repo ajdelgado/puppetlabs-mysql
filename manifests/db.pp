@@ -95,7 +95,7 @@ define mysql::db (
     ensure   => $ensure,
     charset  => $charset,
     collate  => $collate,
-    provider => 'mysql',
+    #provider => 'mysql',
     require  => [Class['mysql::client']],
   }
   ensure_resource('mysql_database', $dbname, $db_resource)
