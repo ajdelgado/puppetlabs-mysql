@@ -31,12 +31,6 @@ class mysql::server::installdb {
       }
     }
 
-    file { $log_dir:
-      ensure => 'directory',
-      owner  => $mysqluser,
-      group  => $mysql::server::mysql_group,
-    }
-
     mysql_datadir { $datadir:
       ensure              => 'present',
       datadir             => $datadir,
